@@ -53,12 +53,30 @@
         //     .then(result => console.log(`Done: ${result}`))
         //     .catch(error => console.log('error', error));
 
+        // const response = await fetch('https://public-api.solscan.io/account/tokens?account=5DNLQ7j5gXZHDBEiX1uNUJEmxF9qzBSv2r4ztCEMpx4A', {method: 'GET'});
+        // console.log('Fetching...');
+        // const data = await response.json();
+        // console.log(response);
+        // console.log(`Done: ${data[0]}`);
 
-        const response = await fetch('http://api-devnet.magiceden.dev/v2/wallets/EWmtsfBA8EikR3vvhsXgxn7cBQCUZfXJ7jMwXUpYRzXY/tokens?offset=0&limit=100&listStatus=listed', {method: 'GET', redirect: 'follow', mode: 'no-cors'});
         console.log('Fetching...');
-        const data = await response.text();
-        console.log(response);
-        console.log(`Done: ${data}`);
+        fetch('http://api-mainnet.magiceden.dev/v2/wallets/5DNLQ7j5gXZHDBEiX1uNUJEmxF9qzBSv2r4ztCEMpx4A/tokens', {method: 'GET', redirect: 'follow'})
+            .then((response) => {
+                return response.text();
+            })
+            .then((data) => {
+                console.log(data);
+            });
+
+        // console.log('Fetching...');
+        // fetch('https://public-api.solscan.io/account/tokens?account=5DNLQ7j5gXZHDBEiX1uNUJEmxF9qzBSv2r4ztCEMpx4A')
+        //     .then((response) => {
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         console.log(data);
+        //     });
+
 
         // const res = await fetch('http://api-mainnet.magiceden.dev/v2/wallets/5DNLQ7j5gXZHDBEiX1uNUJEmxF9qzBSv2r4ztCEMpx4A/tokens', {method: 'GET', redirect: 'follow', mode: 'no-cors'});
         // const data = await res.text();
