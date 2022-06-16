@@ -2,6 +2,7 @@
 	"name": "sveltetest",
 	"version": "0.0.1",
 	"scripts": {
+		"start": "yarn start",
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
