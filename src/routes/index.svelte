@@ -27,8 +27,8 @@
 
         const requestOptions = {
             method: 'GET',
-            /*redirect: 'follow', */
-            /*mode: 'no-cors' */
+            redirect: 'follow', 
+            mode: 'no-cors'
         };
 
         console.log('Fetching...');
