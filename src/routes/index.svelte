@@ -60,7 +60,7 @@
         // console.log(`Done: ${data[0]}`);
 
         console.log('Fetching...');
-        fetch('http://api-mainnet.magiceden.dev/v2/wallets/5DNLQ7j5gXZHDBEiX1uNUJEmxF9qzBSv2r4ztCEMpx4A/tokens', {method: 'GET', redirect: 'follow'})
+        fetch('https://api-mainnet.magiceden.dev/v2/wallets/5DNLQ7j5gXZHDBEiX1uNUJEmxF9qzBSv2r4ztCEMpx4A/tokens', {method: 'GET', redirect: 'follow'})
             .then((response) => {
                 return response.text();
             })
